@@ -20,7 +20,7 @@
 		else {
 			$.Visage.warn("Reinitializing already initialized Visage, ignoring");
 		}
-	}
+	};
 	
 	// Default options: {"start": false, "events": true} (do not autostart and do register events)
 	$.fn.visage = function (options) {
@@ -332,7 +332,7 @@
 				}
 				
 				$.Visage.busy--;
-			}
+			};
 			$.Visage.image.src = src;
 			
 			$.Visage.busy--;
@@ -385,8 +385,8 @@
 			
 			var iWidth = $.Visage.image.width + 2 * $.Visage.config.border;
 			var iHeight = $.Visage.image.height + 2 * $.Visage.config.border;
-			var wWidth = $(window).width()
-			var wHeight = $(window).height()
+			var wWidth = $(window).width();
+			var wHeight = $(window).height();
 			var wRatio = wWidth / wHeight;
 			var iRatio = iWidth / iHeight;
 			var ratio = wRatio / iRatio;
