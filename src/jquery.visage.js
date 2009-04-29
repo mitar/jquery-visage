@@ -235,6 +235,7 @@
 			}
 			
 			$("#visage").stop(true, true).hide();
+			$("#visage-image").attr("src", $.Visage.config.files.blank);
 			if ($.Visage.image != null) {
 				$.Visage.image.onload();
 				$.Visage.image = null;
