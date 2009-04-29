@@ -152,8 +152,8 @@
 				$.Visage.resize();
 			});
 			
-			$(document).keypress(function (event) {
-				if ($.Visage.keypress(event)) {
+			$(document).keyup(function (event) {
+				if ($.Visage.keyup(event)) {
 					event.preventDefault();
 					return false;
 				}
@@ -440,7 +440,7 @@
 			$.Visage.busy--;
 		},
 		
-		"keypress": function (event) {
+		"keyup": function (event) {
 			if (($.Visage.images == null) || ($.Visage.image == null) || $.Visage.stopping) {
 				return false;
 			}
@@ -448,29 +448,27 @@
 			event = event || window.event;
 
 			var keycode = event.keyCode;
-			var escapeKey = event.DOM_VK_ESCAPE || 27;
-
 			var key = String.fromCharCode(keycode).toLowerCase();
-
-			if ((key == $.Visage.config.keys.close) || (keycode == escapeKey)) {
+			
+			if ((key == $.Visage.config.keys.close) || (keycode == (event.DOM_VK_ESCAPE || 27))) {
 				$.Visage.stop();
 				return true;
 			}
-			else if ((key == $.Visage.config.keys.prev) || (keycode == 37)) {
+			else if ((key == $.Visage.config.keys.prev) || (keycode == (event.DOM_VK_LEFT || 37))) {
 				$("#visage-nav-prev").click();
 				return true;
 			}
-			else if ((key == $.Visage.config.keys.next) || (keycode == 39)) {
+			else if ((key == $.Visage.config.keys.next) || (keycode == (event.DOM_VK_RIGHT || 39))) {
 				$("#visage-nav-next").click();
 				return true;
 			}
-			else if ((key == $.Visage.config.keys.first) || (keycode == 40)) {
+			else if ((key == $.Visage.config.keys.first) || (keycode == (event.DOM_VK_DOWN || 40))) {
 				if ($.Visage.busy == 0) {
 					$.Visage.showImage(0);
 				}
 				return true;
 			}
-			else if ((key == $.Visage.config.keys.last) || (keycode == 38)) {
+			else if ((key == $.Visage.config.keys.last) || (keycode == (event.DOM_VK_UP || 38))) {
 				if ($.Visage.busy == 0) {
 					$.Visage.showImage($.Visage.images.length - 1);
 				}
