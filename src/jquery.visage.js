@@ -463,13 +463,13 @@
 				$("#visage-nav-next").click();
 				return true;
 			}
-			else if ((key == $.Visage.config.keys.first) || (keycode == (event.DOM_VK_DOWN || 40))) {
+			else if ((key == $.Visage.config.keys.first) || (keycode == (event.DOM_VK_UP || 38))) {
 				if ($.Visage.busy == 0) {
 					$.Visage.showImage(0);
 				}
 				return true;
 			}
-			else if ((key == $.Visage.config.keys.last) || (keycode == (event.DOM_VK_UP || 38))) {
+			else if ((key == $.Visage.config.keys.last) || (keycode == (event.DOM_VK_DOWN || 40))) {
 				if ($.Visage.busy == 0) {
 					$.Visage.showImage($.Visage.images.length - 1);
 				}
