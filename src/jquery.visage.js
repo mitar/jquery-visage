@@ -81,6 +81,24 @@
 				"blank": "./res/blank.gif",
 				"error": "./res/error.png"
 			},
+			"css": {
+				"prev": {
+					"background": 'transparent url("./res/prev.png") no-repeat scroll center left',
+					"cursor": "pointer"
+				},
+				"prev_disabled": {
+					"background": 'transparent url("./res/prev_disabled.png") no-repeat scroll center left',
+					"cursor": "default"
+				},
+				"next": {
+					"background": 'transparent url("./res/next.png") no-repeat scroll center right',
+					"cursor": "pointer"
+				},
+				"next_disabled": {
+					"background": 'transparent url("./res/next_disabled.png") no-repeat scroll center right',
+					"cursor": "default"
+				}
+			},
 			"opacity": 0.9,
 			"speed": 300, // in milliseconds
 			"loadingWait": 100, // in milliseconds
@@ -271,8 +289,7 @@
 			}
 
 			if (index > 0) {
-				$("#visage-nav-prev").show();
-				$("#visage-nav-prev").unbind().click(function (event) {
+				$("#visage-nav-prev").css($.Visage.config.css.prev).show().unbind().click(function (event) {
 					event.preventDefault();
 					if ($.Visage.busy == 0) {
 						$.Visage.showImage(index - 1);
@@ -280,14 +297,15 @@
 					return false;
 				});
 			}
+			else if ($.Visage.images.length > 1) {
+				$("#visage-nav-prev").css($.Visage.config.css.prev_disabled).show().unbind();
+			}
 			else {
-				$("#visage-nav-prev").hide();
-				$("#visage-nav-prev").unbind();
+				$("#visage-nav-prev").hide().unbind();
 			}
 			
 			if (index < ($.Visage.images.length - 1)) {
-				$("#visage-nav-next").show();
-				$("#visage-nav-next").unbind().click(function (event) {
+				$("#visage-nav-next").css($.Visage.config.css.next).show().unbind().click(function (event) {
 					event.preventDefault();
 					if ($.Visage.busy == 0) {
 						$.Visage.showImage(index + 1);
@@ -295,9 +313,11 @@
 					return false;
 				});
 			}
+			else if ($.Visage.images.length > 1) {
+				$("#visage-nav-next").css($.Visage.config.css.next_disabled).show().unbind();
+			}
 			else {
-				$("#visage-nav-next").hide();
-				$("#visage-nav-next").unbind();
+				$("#visage-nav-next").hide().unbind();
 			}
 			
 			var src = $.Visage.imageSrc(image);
