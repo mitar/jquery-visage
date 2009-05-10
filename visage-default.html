@@ -3,11 +3,34 @@
 <head>
 <title>jQuery Visage</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="stylesheet" type="text/css" href="./res/visage.css" />
+<link rel="stylesheet" type="text/css" href="./res-default/visage.css" />
 <script type="text/javascript" src="./lib/jquery.js"></script>
 <script type="text/javascript" src="./src/jquery.visage.js"></script>
 <script type="text/javascript">
-$.initVisage();
+$.initVisage({
+	"files": {
+		"blank": "./res-default/blank.gif",
+		"error": "./res-default/error.png"
+	},
+	"css": {
+		"prev": {
+			"background": 'transparent url("./res-default/prev.png") no-repeat scroll center left',
+			"cursor": "pointer"
+		},
+		"prev_disabled": {
+			"background": 'transparent url("./res-default/prev_disabled.png") no-repeat scroll center left',
+			"cursor": "default"
+		},
+		"next": {
+			"background": 'transparent url("./res-default/next.png") no-repeat scroll center right',
+			"cursor": "pointer"
+		},
+		"next_disabled": {
+			"background": 'transparent url("./res-default/next_disabled.png") no-repeat scroll center right',
+			"cursor": "default"
+		}
+	}
+});
 $(document).ready(function () {
 	$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?lang=en-us&format=json&jsoncallback=?", function (data, textStatus) {
 		$.each(data.items, function (i, item) {
