@@ -173,7 +173,7 @@
 		};
 		
 		// We should check ((group != null) && !isStopping()) in an animation finish callback if we are using it
-		// (It has been checked before calling this function, but it is necessary to do it in asynchronous code.)
+		// (It has been checked before calling this function, but it is necessary to do it in asynchronous code)
 		$.fn.visage.preImageLoad = function (values, group, visageDOM, isStopping, finish, options) {
 			options.displayTitle(values.title, visageDOM, options);
 			
@@ -191,7 +191,7 @@
 		};
 		
 		// We should check ((group != null) && (image != null) && !isStopping()) in an animation finish callback if we are using it
-		// (It has been checked before calling this function, but it is necessary to do it in asynchronous code.)
+		// (It has been checked before calling this function, but it is necessary to do it in asynchronous code)
 		$.fn.visage.preTransitionResize = function (image, values, group, index, visageDOM, isStopping, finish, options) {
 			// Image has been loaded so there is no more need to display a loading sign
 			if (loadingTimeout != null) {
@@ -203,7 +203,7 @@
 		};
 		
 		// We should check ((group != null) && (image != null) && !isStopping()) in an animation finish callback if we are using it
-		// (It has been checked before calling this function, but it is necessary to do it in asynchronous code.)
+		// (It has been checked before calling this function, but it is necessary to do it in asynchronous code)
 		$.fn.visage.postTransitionResize = function (image, values, group, index, visageDOM, isStopping, finish, options) {
 			visageDOM.image.attr("src", values.src);
 			

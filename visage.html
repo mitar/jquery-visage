@@ -58,12 +58,14 @@ $(document).ready(function () {
 				},
 				"enabledClass": "visage-alt-enabled",
 				"disabledNavClass": "visage-alt-nav-disabled",
-				"transitionResizeSpeed": 300,
+				"transitionResizeSpeed": 300, // Non-zero to show resize animation
 				"addDOM": function (visageDOM, options) {
 					$.fn.visage.addDOM(visageDOM, options);
 					// Moves elements to overlay so they are all in the same stacking context
 					$(visageDOM.prev).add(visageDOM.next).add(visageDOM.count).add(visageDOM.title).appendTo(visageDOM.overlay);
 				},
+				// We move setting image source to preTransitionResize so that transition resize is also resizing the image
+				// (So that image is shown as soon as possible and we are not waiting for the resize to finish to display it)
 				"preTransitionResize": function (image, values, group, index, visageDOM, isStopping, finish, options) {
 					$.fn.visage.preTransitionResize(image, values, group, index, visageDOM, isStopping, function () {}, options);
 					visageDOM.image.attr("src", values.src);
