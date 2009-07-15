@@ -587,7 +587,8 @@
 			resize(null);
 		});
 		
-		$(document).keyup(function (event) {
+		// We use keydown event and not keyup so that we can prevent browser handling events (like page scrolling on up/down keys)
+		$(document).keydown(function (event) {
 			if (keyup(event)) {
 				event.preventDefault();
 				return false;
