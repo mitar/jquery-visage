@@ -51,7 +51,7 @@
 	margin: 0px;
 	padding: 0px;
 	border: none;
-	background: transparent url("loading.gif") no-repeat scroll center center;
+	background: transparent url("images/loading.gif") no-repeat scroll center center;
 }
 
 #visage-image {
@@ -80,7 +80,7 @@
 	width: 20px;
 	margin-top: -10px;
 	margin-left: -25px;
-	background: transparent url("prev.png") no-repeat scroll center left;
+	background: transparent url("images/prev.png") no-repeat scroll center left;
 	cursor: pointer;
 }
 
@@ -92,17 +92,17 @@
 	width: 20px;
 	margin-top: -10px;
 	margin-left: 5px;
-	background: transparent url("next.png") no-repeat scroll center right;
+	background: transparent url("images/next.png") no-repeat scroll center right;
 	cursor: pointer;
 }
 
 #visage-nav-prev.visage-nav-disabled {
-	background: transparent url("prev_disabled.png") no-repeat scroll center left;
+	background: transparent url("images/prev_disabled.png") no-repeat scroll center left;
 	cursor: default;
 }
 
 #visage-nav-next.visage-nav-disabled {
-	background: transparent url("next_disabled.png") no-repeat scroll center right;
+	background: transparent url("images/next_disabled.png") no-repeat scroll center right;
 	cursor: default;
 }
 
@@ -114,7 +114,7 @@
 	width: 20px;
 	margin-top: 10px;
 	margin-right: 10px;
-	background: transparent url("close.png") no-repeat scroll top right;
+	background: transparent url("images/close.png") no-repeat scroll top right;
 	cursor: pointer;
 }
 
