@@ -612,8 +612,8 @@
 			"error": "Error displaying the image"
 		},
 		"files": {
-			"blank": "./res/blank.gif",
-			"error": "./res/error.png"
+			"blank": "./res/images/blank.gif",
+			"error": "./res/images/error.png"
 		},
 		"css": {
 			"close": {},
@@ -633,7 +633,7 @@
 			"title": {"id": "visage-title"},
 			"count": {"id": "visage-count"},
 			"container": {"id": "visage-container"},
-			"image": {"id": "visage-image", "alt": "", "title": "", "src": "./res/blank.gif"},
+			"image": {"id": "visage-image", "alt": "", "title": "", "src": "./res/images/blank.gif"},
 			"visage": {"id": "visage"},
 			"overlay": {"id": "visage-overlay"},
 			"prev": {"id": "visage-nav-prev", "title": "Previous"},
