@@ -13,7 +13,7 @@ Example_ with default and alternative settings.
 .. _Example: http://mitar.github.com/jquery-visage/
 
 Plugin is very customizable through provided configuration options and API
-hooks. See `$.fn.visage.defaults` in jquery.visage.js_ file to see what is
+hooks. See ``$.fn.visage.defaults`` in jquery.visage.js_ file to see what is
 available. You can customize plugin per-instance or globally.
 
 .. _jquery.visage.js: https://github.com/mitar/jquery-visage/blob/master/src/jquery.visage.js
