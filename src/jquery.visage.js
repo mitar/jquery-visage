@@ -1,11 +1,7 @@
 /*
- * Mitar <mitar@tnode.com>
+ * Mitar <mitar.jquery@tnode.com>
  * http://mitar.tnode.com/
- * In kind public domain.
- *
- * $Id$
- * $Revision$
- * $HeadURL$
+ * BSD licensed.
 */
 
 (function ($) {
