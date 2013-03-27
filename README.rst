@@ -8,9 +8,9 @@ a series of images in a lightbox-like way.
 
 .. _jQuery: http://jquery.com/
 
-Example_ with default and alternative settings.
+See example_ with default and alternative settings.
 
-.. _Example: http://mitar.github.com/jquery-visage/
+.. _example: http://mitar.github.com/jquery-visage/
 
 Plugin is very customizable through provided configuration options and API
 hooks. See ``$.fn.visage.defaults`` in jquery.visage.js_ file to see what is
